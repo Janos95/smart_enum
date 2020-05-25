@@ -1,16 +1,31 @@
-#include "smart_enum.h"
 #include <cstdio>
+#include "smart_enum.h"
 
-
-SMART_ENUM(Color, int, RED, GREEN, YELLOW)
+SMART_ENUM(Color, int, 
+    RED, 
+    GREEN, 
+    YELLOW,
+    LIME,
+    AQUA,
+    TEAL,
+    FUCHSIA,
+    PURPLE,
+    MAGENTA,
+    GOLD,
+    DAFFODIL,
+    FLAXEN,
+    BUTTER,
+    LEMON,
+    BLONDE
+    )
 
 void f(Color::Value c){
-    puts(Color::to_string(c));
+    std::cout << Color::to_string(c) << std::endl;
 }
 
 int main(){
     f(Color::RED);
-    for(auto c : Color::range)
-        puts(Color::to_string(c));
+    for(auto c : Color::range){
+        std::cout << Color::to_string(c) << std::endl;
+    }
 }
-

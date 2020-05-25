@@ -23,5 +23,5 @@ int main(){
 }
 ```
 
-The only restriction is that your enum should not have more than 8 possible values, 
+The only restriction is that your enum should not have more than 15 possible values, 
 but if you need more, just expand on the FOR_EACH macro.
